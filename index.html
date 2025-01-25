@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=backspace" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
         <section class="calculadora">
-            <div class="res">
-                <p></p>
-            </div>
+            <div class="res"></div>
+
             <div class="botoes">
                 <p>
-                    <input type="button" value="7" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="8" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="9" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="x" class="sinais botao" onclick="clicou()">
+                    <span class="material-symbols-outlined sinais" onclick="back()">
+                        backspace
+                    </span>
+                    <input type="button" value="C" class="sinais espaçamento" onclick="reset()">
+                    <input type="button" value="/" class="sinais espaçamento" onclick="clicou('/')">
                 </p>
                 <p>
-                    <input type="button" value="4" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="5" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="6" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="-" class="sinais botao" onclick="clicou()">
+                    <input type="button" value="7" class="numeros" onclick="clicou('7')">
+                    <input type="button" value="8" class="numeros" onclick="clicou('8')">
+                    <input type="button" value="9" class="numeros" onclick="clicou('9')">
+                    <input type="button" value="-" class="sinais" onclick="clicou('-')">
                 </p>
                 <p>
-                    <input type="button" value="1" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="2" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="3" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="+" class="sinais botao" onclick="clicou()">
+                    <input type="button" value="4" class="numeros" onclick="clicou('4')">
+                    <input type="button" value="5" class="numeros" onclick="clicou('5')">
+                    <input type="button" value="6" class="numeros" onclick="clicou('6')">
+                    <input type="button" value="+" class="sinais" onclick="clicou('+')">
                 </p>
                 <p>
-                    <input type="button" value="/" class="sinais botao" onclick="clicou()">
-                    <input type="button" value="0" class="numeros botao" onclick="clicou()">
-                    <input type="button" value="." class="sinais botao" onclick="clicou()">
-                    <input type="button" value="=" class="sinais botao" id="igual">
+                    <input type="button" value="1" class="numeros" onclick="clicou('1')">
+                    <input type="button" value="2" class="numeros" onclick="clicou('2')">
+                    <input type="button" value="3" class="numeros" onclick="clicou('3')">
+                    <input type="button" value="x" class="sinais" onclick="clicou('*')">
                 </p>
+                <p>
+                    <input type="button" value="0" class="numeros" onclick="clicou('0')" id="botao0">
+                    <input type="button" value="." class="sinais" onclick="clicou('.')">
+                    <input type="button" value="=" class="sinais" id="igual" onclick="operação()">
+                </p>
+                
             </div>
         </section>
     </main>
